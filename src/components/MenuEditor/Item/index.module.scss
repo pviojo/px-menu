@@ -1,0 +1,62 @@
+
+:local(.item){
+  display:grid;
+  grid-template-areas: 
+    "title price actions"
+    "description description actions";
+  grid-template-columns: 1fr 100px auto;
+  background: #fff;
+  gap: var(--half-spacing) var(--spacing);
+  align-items: flex-start;
+  font-size:16px;
+}
+
+
+:local(.item input),
+:local(.item textarea){
+  color: var(--default-font-color);
+  border: 1px solid #fff;
+  border-radius: 0;
+  padding:var(--half-spacing);
+  width:100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size:16px;
+}
+
+
+:local(.item .title){
+  grid-area: title;
+}  
+:local(.item .price){
+  grid-area: price;
+  text-align: right;  color:#444;
+}
+:local(.item .description){
+  grid-area: description;
+  font-size:14px;
+  color:#999;
+}
+
+:local(.item textarea.description){
+  resize: none;
+  height:4.5rem;
+  line-height: 150%;
+}
+
+:local(.item .actions){
+  grid-area: actions;
+  visibility: hidden;
+}
+:local(.item.active .actions){
+  visibility: visible;
+}
+
+:local(.item.active input),
+:local(.item.active textarea){
+  border-bottom: 1px solid var(--lowContrast3);
+}
+
+  
+:local(.item.active .description){
+  height:4.5rem;
+}

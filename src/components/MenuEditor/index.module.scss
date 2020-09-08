@@ -1,0 +1,52 @@
+:local(.section){
+  background: #fff;
+  border-radius: 3px;
+  font-size: 20px;
+  margin-bottom: var(--four-spacing);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
+}
+
+:local(.section .name){
+  background: var(--mainColor);
+  border-radius: 3px 3px 0 0;
+  padding: var(--spacing);
+  display: grid;
+  gap: var(--spacing);
+  grid-template-columns: 1fr auto;
+  color:#fff;
+}
+:local(.section .name input){
+  border:0;
+  background:transparent;
+  color:#fff;
+  border-radius:0px;
+  padding:5px;
+  width:100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+}
+:local(.section .name input::placeholder){
+  color: var(--mainColorContrast);
+}
+:local(.section .items){
+  display: grid;
+}
+
+:local(.section .items .item){
+  padding: var(--spacing);
+  border-bottom:1px solid #eee;
+}
+:local(.section .items .item:last-child){
+  border-bottom:0;
+}
+
+:local(.section.editable .name input){
+  border-bottom: 1px solid var(--mainColorContrast);
+}
+
+
+@media(max-width:400px){
+  :local(.section){
+    margin-bottom: var(--double-spacing);
+  }
+}

@@ -1,0 +1,21 @@
+:local(.logo){
+  width:100px;
+  margin:var(--double-spacing) auto;
+  display: block;
+  border-radius: 3px;
+  background:#fff;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
+  padding: var(--half-spacing);
+}
+:local(.footer){
+  color:#999;
+  font-size:14px;
+  text-align: right;
+  padding: 0px var(--spacing);
+}
+
+:local(.footer .peixeLogo){
+  width:50px;
+  vertical-align: middle;
+  
+}

@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --half-spacing: 12px;
+  --spacing: 24px;
+  --double-spacing: 48px;
+  --four-spacing: 96px;
+  --default-size: 14px;
+  --small-size: 12px;
+}
+
+body.light-theme {
+  --default-font-color: #444;
+  --mainColor: #53a318;
+  --mainColorContrast: #94be75;
+  --bgRemark: #f8f8f8;
+  --lowRemark: #fff;
+  --lowContrast0: #f5f5f5;
+  --lowContrast: #eee;
+  --lowContrast1: #e6e6e6;
+  --lowContrast2: #e0e0e0;
+  --lowContrast3: #ddd;
+  --lowContrastTr: #eeeeeeaa;
+  --secondaryColorContrast: #fff;
+  --primaryButtonBackground: var(--secondaryColor);
+  --primaryButtonColor: var(--secondaryColorContrast);
+  --primaryButtonHoverColor: #f80;
+
+  --line-color: #ddd;
+  --link-color: #006acb;
+  --disabled: #ccc;
+  --body-background: #eeeeee;
+
+  --danger: #e21;
+
+  color: var(--default-font-color);
+}
+
+body {
+  background: hsl(0, 0%, 96%);
+  max-width: 800px;
+  width: 100%;
+  margin: var(--spacing) auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--default-font-color);
+}
+
+input,
+textarea {
+  color: var(--default-font-color);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+@media (max-width: 400px) {
+  body {
+    padding: 0 var(--spacing);
+  }
+}
