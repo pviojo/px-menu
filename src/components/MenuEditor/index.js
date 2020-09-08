@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
@@ -8,7 +8,7 @@ import Item from "./Item";
 
 import styles from "./index.module.scss";
 const MenuEditor = ({ sections, editable }) => {
-  const [stSections, setStSections] = useState(sections);
+  const [stSections] = useState(sections);
 
   return stSections.map((section, index) => (
     <div
